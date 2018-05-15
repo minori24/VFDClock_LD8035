@@ -976,10 +976,6 @@ Text Label 4550 4300 0    60   ~ 0
 SEG_DP
 Wire Wire Line
 	4200 4300 4550 4300
-Text Label 4550 4200 0    60   ~ 0
-SEG_-
-Wire Wire Line
-	4200 4200 4550 4200
 Text Label 4550 4000 0    60   ~ 0
 SDA
 Wire Wire Line
@@ -988,15 +984,9 @@ Text Label 4550 3900 0    60   ~ 0
 SCL
 Wire Wire Line
 	4200 3900 4550 3900
-Wire Wire Line
-	4200 4100 4550 4100
-Wire Wire Line
-	4200 3700 4550 3700
-Wire Wire Line
-	4200 3800 4550 3800
-Text Label 4550 3700 0    60   ~ 0
+Text Label 4550 4200 0    60   ~ 0
 SW_A
-Text Label 4550 3800 0    60   ~ 0
+Text Label 4550 4100 0    60   ~ 0
 SW_B
 $Comp
 L GND #PWR013
@@ -1444,4 +1434,8 @@ Wire Wire Line
 Wire Wire Line
 	3900 1850 3800 1850
 Connection ~ 3800 1850
+Wire Wire Line
+	4200 4100 4550 4100
+Wire Wire Line
+	4200 4200 4550 4200
 $EndSCHEMATC
