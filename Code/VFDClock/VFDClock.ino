@@ -273,7 +273,7 @@ void loop() {
     hour = now.hour();
     minute = now.minute();
     second = now.second();
-
+    //Serial.println(second);
     //if(digitalRead(PIN_BUTTON_MODE) == LOW) mode = MODE_TIMESET_HOUR;
   }
   
