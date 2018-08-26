@@ -1,8 +1,6 @@
-#include "RTClib.h"
+
 #include <FlexiTimer2.h>
 #include <Wire.h>
-
-RTC_DS1307 rtc;
 
 #define MODE_NORMAL 100
 #define MODE_TIMESET_HOUR 101
@@ -15,13 +13,14 @@ RTC_DS1307 rtc;
 #define PIN_SEG_E 10
 #define PIN_SEG_F 11
 #define PIN_SEG_G 12
+#define PIN_SEG_MINUS A0
 #define PIN_SEG_DP A1
 
 #define PIN_DIGIT_0 A2
 #define PIN_DIGIT_1 A3
 #define PIN_DIGIT_2 5
-#define PIN_DIGIT_3 13
-#define PIN_DIGIT_4 A0
+#define PIN_DIGIT_3 A6
+#define PIN_DIGIT_4 A7
 #define PIN_DIGIT_5 2
 
 #define PIN_BUTTON_MODE 3
@@ -32,42 +31,25 @@ RTC_DS1307 rtc;
 #define PIN_SCL A5
 #define PIN_SDA A4
 
-#define INTERVAL 13
+#define INTERVAL 20
 #define NUM_DIGITS 6
 
-#define STATE_BUTTON_NOT_PRESSED 0
-#define STATE_BUTTON_DOWN 1
-#define STATE_BUTTON_PRESSING 2
-#define STATE_BUTTON_LONGPRESSED 3
-
 uint8_t digit = 0;
-uint8_t hour = 12, minute = 34, second = 56;
+
+uint8_t hour = 23, minute = 25, second = 0;
 uint8_t dot = 0, minus = 0;
 uint8_t dotCount = 10;
 unsigned long dMicros = 0;
-uint8_t bTimeSetDone = 0;
 
 uint8_t mode = MODE_NORMAL;
-uint8_t modeButtonState = STATE_BUTTON_NOT_PRESSED;
-unsigned long elapsed = 0;
+uint8_t bTimeSetDone = 0;
+uint8_t bCountStart = 0;
+uint16_t buttonPressCount = 0;
+unsigned long prev_t = 0;
 
-
-uint8_t digits[] = {PIN_DIGIT_0, PIN_DIGIT_1, PIN_DIGIT_2, PIN_DIGIT_3, 
+uint8_t digits[NUM_DIGITS] = {PIN_DIGIT_0, PIN_DIGIT_1, PIN_DIGIT_2, PIN_DIGIT_3, 
                                             PIN_DIGIT_4, PIN_DIGIT_5};
 uint8_t times[NUM_DIGITS];
-
-
-void pciSetup(byte pin)
-{
-    *digitalPinToPCMSK(pin) |= bit (digitalPinToPCMSKbit(pin));  // enable pin
-    PCIFR  |= bit (digitalPinToPCICRbit(pin)); // clear any outstanding interrupt
-    PCICR  |= bit (digitalPinToPCICRbit(pin)); // enable interrupt for the group
-}
-
-ISR (PCINT2_vect) // handle pin change interrupt for A0 to A5 here
-{
-  
-}
 
 void clearSeg(){
     digitalWrite(PIN_SEG_A, LOW);
@@ -78,10 +60,12 @@ void clearSeg(){
     digitalWrite(PIN_SEG_F, LOW);
     digitalWrite(PIN_SEG_G, LOW);
     digitalWrite(PIN_SEG_DP, LOW);
+    digitalWrite(PIN_SEG_MINUS, LOW);
 }
 
 void decodeSeg(int num, uint8_t dp, uint8_t minus){
   if(dp) digitalWrite(PIN_SEG_DP, HIGH);
+  if(minus) digitalWrite(PIN_SEG_MINUS, HIGH);
   
   switch(num){
     case 0:
@@ -171,21 +155,25 @@ void writeVFD(){
     dot = 0;
   }
   
-  times[5] = hour / 10;
-  times[4] = hour % 10;
-  times[3] = minute / 10;
-  times[2] = minute % 10;
-  times[1] = second / 10;
   times[0] = second % 10;
+  times[1] = second / 10;
+  times[2] = minute % 10;
+  times[3] = minute / 10;
+  times[4] = hour % 10;
+  times[5] = hour / 10;
 
   for(int i = 0; i < NUM_DIGITS; i++){
-    digitalWrite(digits[i], HIGH);
+    for(int j = 0; j < NUM_DIGITS; j++){
+        digitalWrite(digits[j], LOW);
+        if(i == j) digitalWrite(digits[j], HIGH); 
+    }
+    
     if(i == 2 || i == 4) decodeSeg(times[i], dot, 0);
     else decodeSeg(times[i], 0, 0);
-    delayMicroseconds(2100);
+    delayMicroseconds(2000);
     clearSeg();
-    digitalWrite(digits[i], LOW);
   }
+
 }
 
 void setup() {
@@ -197,9 +185,8 @@ void setup() {
   pinMode(PIN_SEG_E, OUTPUT);
   pinMode(PIN_SEG_F, OUTPUT);
   pinMode(PIN_SEG_G, OUTPUT);
+  pinMode(PIN_SEG_MINUS, OUTPUT);
   pinMode(PIN_SEG_DP, OUTPUT);
-  pinMode(PIN_BUTTON_MODE, INPUT_PULLUP);
-  pinMode(PIN_BUTTON_COUNT, INPUT_PULLUP);
   pinMode(PIN_BUTTON_MODE, INPUT_PULLUP);
   pinMode(PIN_BUTTON_COUNT, INPUT_PULLUP);
   pinMode(PIN_DIGIT_0, OUTPUT);
@@ -209,34 +196,24 @@ void setup() {
   pinMode(PIN_DIGIT_4, OUTPUT);
   pinMode(PIN_DIGIT_5, OUTPUT);
   
+  for(int i = 0; i < NUM_DIGITS; i++) digits[i] = 0;
   Serial.begin(115200);
   Wire.begin();
-  rtc.begin();
-  
-  if (!rtc.isrunning()) {
-    Serial.println("RTC is NOT running!");
-    // following line sets the RTC to the date & time this sketch was compiled
-     rtc.adjust(DateTime(__DATE__, __TIME__));
-  }
-  
-  if(bTimeSetDone == 1){
-    DateTime now = rtc.now();
-    DateTime newDate = DateTime(now.year(), now.month(), now.day(), hour, minute, 0);
-    rtc.adjust(newDate);
-    bTimeSetDone = 0;
-  }
 
+  Serial.println("Start");
+  
   FlexiTimer2::set(INTERVAL, writeVFD);
   FlexiTimer2::start();
 }
 
+
 void loop() {
+  
   if(mode == MODE_NORMAL){
-    if(millis() % 50 == 0){
-      DateTime now = rtc.now();
-      hour = now.hour();
-      minute = now.minute();
-      second = now.second();
-    }
+    
+    //Serial.println(second);
+    //if(digitalRead(PIN_BUTTON_MODE) == LOW) mode = MODE_TIMESET_HOUR;
   }
+  
+  delay(50);
 }
