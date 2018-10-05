@@ -1,6 +1,14 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:vfd-watch-cache
+LIBS:arduino
+LIBS:switches
+LIBS:MiscComponents
 LIBS:VFD_Clock_LD8035-cache
-EELAYER 26 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +23,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L VFD_Clock_LD8035-rescue:ld8035e V1
+L ld8035e V1
 U 1 1 5AC35A05
 P 8600 1300
 F 0 "V1" H 9400 1175 60  0000 C CNN
@@ -26,7 +34,7 @@ F 3 "" H 8600 1350 60  0000 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:ld8035e V2
+L ld8035e V2
 U 1 1 5AC35A81
 P 8600 2500
 F 0 "V2" H 9400 2375 60  0000 C CNN
@@ -37,7 +45,7 @@ F 3 "" H 8600 2550 60  0000 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:ld8035e V3
+L ld8035e V3
 U 1 1 5AC35DA5
 P 8600 3700
 F 0 "V3" H 9400 3575 60  0000 C CNN
@@ -48,7 +56,7 @@ F 3 "" H 8600 3750 60  0000 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:ld8035e V4
+L ld8035e V4
 U 1 1 5AC35DEE
 P 8600 4950
 F 0 "V4" H 9400 4825 60  0000 C CNN
@@ -59,7 +67,7 @@ F 3 "" H 8600 5000 60  0000 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:ld8035e V5
+L ld8035e V5
 U 1 1 5AC36008
 P 10450 1300
 F 0 "V5" H 11250 1175 60  0000 C CNN
@@ -70,7 +78,7 @@ F 3 "" H 10450 1350 60  0000 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:ld8035e V6
+L ld8035e V6
 U 1 1 5AC3600E
 P 10450 2500
 F 0 "V6" H 11250 2375 60  0000 C CNN
@@ -81,7 +89,7 @@ F 3 "" H 10450 2550 60  0000 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:ARDUINO_NANO ARDUINO1
+L ARDUINO_NANO ARDUINO1
 U 1 1 5AC360CA
 P 3600 4050
 F 0 "ARDUINO1" H 3600 4900 70  0000 C CNN
@@ -92,7 +100,7 @@ F 3 "" H 3600 4050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:TD62783 U2
+L TD62783 U2
 U 1 1 5AC3624E
 P 6000 1650
 F 0 "U2" H 6000 1100 50  0000 C CNN
@@ -103,7 +111,7 @@ F 3 "" H 6000 1650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:TD62783 U3
+L TD62783 U3
 U 1 1 5AC36303
 P 6000 2950
 F 0 "U3" H 6000 2400 50  0000 C CNN
@@ -114,7 +122,7 @@ F 3 "" H 6000 2950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:SW_Push SW1
+L SW_Push SW1
 U 1 1 5AC37212
 P 1200 5550
 F 0 "SW1" H 1250 5650 50  0000 L CNN
@@ -125,7 +133,7 @@ F 3 "" H 1200 5750 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:SW_Push SW2
+L SW_Push SW2
 U 1 1 5AC372B9
 P 1600 5550
 F 0 "SW2" H 1650 5650 50  0000 L CNN
@@ -136,73 +144,73 @@ F 3 "" H 1600 5750 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:R R1
+L R R1
 U 1 1 5AC381BD
 P 8850 800
 F 0 "R1" V 8930 800 50  0000 C CNN
 F 1 "200" V 8850 800 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 8780 800 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P5.08mm_Vertical" V 8780 800 50  0001 C CNN
 F 3 "" H 8850 800 50  0001 C CNN
 	1    8850 800 
 	0    -1   -1   0   
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:R R2
+L R R2
 U 1 1 5AC38DB5
 P 8850 2000
 F 0 "R2" V 8930 2000 50  0000 C CNN
 F 1 "200" V 8850 2000 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 8780 2000 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P5.08mm_Vertical" V 8780 2000 50  0001 C CNN
 F 3 "" H 8850 2000 50  0001 C CNN
 	1    8850 2000
 	0    -1   -1   0   
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:R R3
+L R R3
 U 1 1 5AC38E2B
 P 8850 3200
 F 0 "R3" V 8930 3200 50  0000 C CNN
 F 1 "200" V 8850 3200 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 8780 3200 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P5.08mm_Vertical" V 8780 3200 50  0001 C CNN
 F 3 "" H 8850 3200 50  0001 C CNN
 	1    8850 3200
 	0    -1   -1   0   
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:R R4
+L R R4
 U 1 1 5AC3932E
 P 8850 4450
 F 0 "R4" V 8930 4450 50  0000 C CNN
 F 1 "200" V 8850 4450 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 8780 4450 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P5.08mm_Vertical" V 8780 4450 50  0001 C CNN
 F 3 "" H 8850 4450 50  0001 C CNN
 	1    8850 4450
 	0    -1   -1   0   
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:R R5
+L R R5
 U 1 1 5AC393AE
 P 10700 800
 F 0 "R5" V 10780 800 50  0000 C CNN
 F 1 "200" V 10700 800 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 10630 800 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P5.08mm_Vertical" V 10630 800 50  0001 C CNN
 F 3 "" H 10700 800 50  0001 C CNN
 	1    10700 800 
 	0    -1   1    0   
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:R R6
+L R R6
 U 1 1 5AC397A4
 P 10700 2000
 F 0 "R6" V 10780 2000 50  0000 C CNN
 F 1 "200" V 10700 2000 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 10630 2000 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P5.08mm_Vertical" V 10630 2000 50  0001 C CNN
 F 3 "" H 10700 2000 50  0001 C CNN
 	1    10700 2000
 	0    -1   1    0   
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:CONN_01X05 J3
+L CONN_01X05 J3
 U 1 1 5AC3CB54
 P 3800 6950
 F 0 "J3" H 3800 7250 50  0000 C CNN
@@ -227,7 +235,11 @@ Wire Wire Line
 Wire Wire Line
 	5600 1750 5300 1750
 Wire Bus Line
+	7700 2000 7700 5750
+Wire Bus Line
 	7700 5750 9700 5750
+Wire Bus Line
+	9700 5750 9700 2000
 Entry Wire Line
 	6500 2650 6600 2750
 Entry Wire Line
@@ -258,6 +270,8 @@ Entry Bus Bus
 	7600 3350 7700 3450
 Wire Bus Line
 	6600 3350 7600 3350
+Wire Bus Line
+	6600 1950 6600 3350
 Entry Wire Line
 	8450 1800 8350 1900
 Entry Wire Line
@@ -276,6 +290,8 @@ Entry Wire Line
 	8700 1800 8600 1900
 Entry Wire Line
 	8800 1800 8700 1900
+Wire Bus Line
+	7800 1900 8750 1900
 Entry Bus Bus
 	7800 1900 7700 2000
 Wire Wire Line
@@ -330,6 +346,8 @@ Entry Wire Line
 	8700 3000 8600 3100
 Entry Wire Line
 	8800 3000 8700 3100
+Wire Bus Line
+	7800 3100 8700 3100
 Entry Bus Bus
 	7800 3100 7700 3200
 Wire Wire Line
@@ -386,6 +404,8 @@ Entry Wire Line
 	8700 4200 8600 4300
 Entry Wire Line
 	8800 4200 8700 4300
+Wire Bus Line
+	7800 4300 8700 4300
 Entry Bus Bus
 	7800 4300 7700 4400
 Wire Wire Line
@@ -442,6 +462,8 @@ Entry Wire Line
 	8700 5450 8600 5550
 Entry Wire Line
 	8800 5450 8700 5550
+Wire Bus Line
+	7800 5550 8700 5550
 Entry Bus Bus
 	7800 5550 7700 5650
 Wire Wire Line
@@ -534,6 +556,8 @@ Text Label 10600 1800 0    60   ~ 0
 h
 Text Label 10650 1800 0    60   ~ 0
 dp
+Wire Bus Line
+	9800 1900 10550 1900
 Entry Bus Bus
 	9800 1900 9700 2000
 Entry Wire Line
@@ -590,6 +614,8 @@ Text Label 10600 3000 0    60   ~ 0
 h
 Text Label 10650 3000 0    60   ~ 0
 dp
+Wire Bus Line
+	9800 3100 10550 3100
 Entry Bus Bus
 	9800 3100 9700 3200
 Wire Wire Line
@@ -615,7 +641,7 @@ Wire Wire Line
 Wire Wire Line
 	10350 2000 10550 2000
 $Comp
-L VFD_Clock_LD8035-rescue:GND #PWR01
+L GND #PWR01
 U 1 1 5AC3B76B
 P 9050 5400
 F 0 "#PWR01" H 9050 5150 50  0001 C CNN
@@ -626,7 +652,7 @@ F 3 "" H 9050 5400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:GND #PWR02
+L GND #PWR02
 U 1 1 5AC3B8B8
 P 9050 4150
 F 0 "#PWR02" H 9050 3900 50  0001 C CNN
@@ -637,7 +663,7 @@ F 3 "" H 9050 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:GND #PWR03
+L GND #PWR03
 U 1 1 5AC3B9B4
 P 9050 2950
 F 0 "#PWR03" H 9050 2700 50  0001 C CNN
@@ -648,7 +674,7 @@ F 3 "" H 9050 2950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:GND #PWR04
+L GND #PWR04
 U 1 1 5AC3B9FE
 P 9100 1750
 F 0 "#PWR04" H 9100 1500 50  0001 C CNN
@@ -659,7 +685,7 @@ F 3 "" H 9100 1750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:GND #PWR05
+L GND #PWR05
 U 1 1 5AC3BA48
 P 10950 1750
 F 0 "#PWR05" H 10950 1500 50  0001 C CNN
@@ -670,7 +696,7 @@ F 3 "" H 10950 1750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:GND #PWR06
+L GND #PWR06
 U 1 1 5AC3BA92
 P 10950 2950
 F 0 "#PWR06" H 10950 2700 50  0001 C CNN
@@ -877,7 +903,7 @@ DIGIT_0_AR
 Text Label 4550 4100 0    60   ~ 0
 DIGIT_1_AR
 $Comp
-L VFD_Clock_LD8035-rescue:GND #PWR07
+L GND #PWR07
 U 1 1 5AC40D91
 P 4450 5100
 F 0 "#PWR07" H 4450 4850 50  0001 C CNN
@@ -888,7 +914,7 @@ F 3 "" H 4450 5100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:+5V #PWR08
+L +5V #PWR08
 U 1 1 5AC40DC8
 P 4350 3100
 F 0 "#PWR08" H 4350 2950 50  0001 C CNN
@@ -899,7 +925,7 @@ F 3 "" H 4350 3100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:GND #PWR09
+L GND #PWR09
 U 1 1 5AC40E19
 P 2850 5100
 F 0 "#PWR09" H 2850 4850 50  0001 C CNN
@@ -922,7 +948,7 @@ Wire Wire Line
 Wire Wire Line
 	4350 3600 4350 3100
 $Comp
-L VFD_Clock_LD8035-rescue:GND #PWR010
+L GND #PWR010
 U 1 1 5AC41481
 P 1600 5950
 F 0 "#PWR010" H 1600 5700 50  0001 C CNN
@@ -933,7 +959,7 @@ F 3 "" H 1600 5950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:GND #PWR011
+L GND #PWR011
 U 1 1 5AC414CB
 P 1200 5950
 F 0 "#PWR011" H 1200 5700 50  0001 C CNN
@@ -956,7 +982,7 @@ SW_A
 Text Label 1600 5150 0    60   ~ 0
 SW_B
 $Comp
-L VFD_Clock_LD8035-rescue:GND #PWR012
+L GND #PWR012
 U 1 1 5AC419D7
 P 3450 7300
 F 0 "#PWR012" H 3450 7050 50  0001 C CNN
@@ -967,7 +993,7 @@ F 3 "" H 3450 7300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:+5V #PWR013
+L +5V #PWR013
 U 1 1 5AC42D74
 P 3450 6600
 F 0 "#PWR013" H 3450 6450 50  0001 C CNN
@@ -1022,7 +1048,7 @@ Wire Wire Line
 Text Label 9650 1400 0    60   ~ 0
 DIGIT_4
 $Comp
-L VFD_Clock_LD8035-rescue:+12V #PWR014
+L +12V #PWR014
 U 1 1 5AC456AC
 P 5500 1000
 F 0 "#PWR014" H 5500 850 50  0001 C CNN
@@ -1033,7 +1059,7 @@ F 3 "" H 5500 1000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:+12V #PWR015
+L +12V #PWR015
 U 1 1 5AC4579E
 P 5200 2400
 F 0 "#PWR015" H 5200 2250 50  0001 C CNN
@@ -1052,7 +1078,7 @@ Wire Wire Line
 Wire Wire Line
 	5200 3350 5200 2400
 $Comp
-L VFD_Clock_LD8035-rescue:GND #PWR016
+L GND #PWR016
 U 1 1 5AC45A4D
 P 6450 3550
 F 0 "#PWR016" H 6450 3300 50  0001 C CNN
@@ -1067,7 +1093,7 @@ Wire Wire Line
 Wire Wire Line
 	6450 3350 6450 3550
 $Comp
-L VFD_Clock_LD8035-rescue:GND #PWR017
+L GND #PWR017
 U 1 1 5AC45BB7
 P 6450 2250
 F 0 "#PWR017" H 6450 2000 50  0001 C CNN
@@ -1088,7 +1114,7 @@ Entry Wire Line
 Entry Wire Line
 	6500 3150 6600 3250
 $Comp
-L VFD_Clock_LD8035-rescue:C C2
+L C C2
 U 1 1 5AC4B59A
 P 6050 4350
 F 0 "C2" H 6075 4450 50  0000 L CNN
@@ -1099,7 +1125,7 @@ F 3 "" H 6050 4350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:C C3
+L C C3
 U 1 1 5AC4B923
 P 6400 4350
 F 0 "C3" H 6425 4450 50  0000 L CNN
@@ -1110,7 +1136,7 @@ F 3 "" H 6400 4350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:GND #PWR018
+L GND #PWR018
 U 1 1 5AC4B982
 P 6400 4700
 F 0 "#PWR018" H 6400 4450 50  0001 C CNN
@@ -1121,7 +1147,7 @@ F 3 "" H 6400 4700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:GND #PWR019
+L GND #PWR019
 U 1 1 5AC4B9D2
 P 6050 4700
 F 0 "#PWR019" H 6050 4450 50  0001 C CNN
@@ -1132,7 +1158,7 @@ F 3 "" H 6050 4700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:+12V #PWR020
+L +12V #PWR020
 U 1 1 5AC4BA22
 P 6050 4050
 F 0 "#PWR020" H 6050 3900 50  0001 C CNN
@@ -1143,7 +1169,7 @@ F 3 "" H 6050 4050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:+12V #PWR021
+L +12V #PWR021
 U 1 1 5AC4BA72
 P 6400 4050
 F 0 "#PWR021" H 6400 3900 50  0001 C CNN
@@ -1162,7 +1188,7 @@ Wire Wire Line
 Wire Wire Line
 	6050 4500 6050 4700
 $Comp
-L VFD_Clock_LD8035-rescue:GND #PWR022
+L GND #PWR022
 U 1 1 5AC4C321
 P 1900 7500
 F 0 "#PWR022" H 1900 7250 50  0001 C CNN
@@ -1173,7 +1199,7 @@ F 3 "" H 1900 7500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:GND #PWR023
+L GND #PWR023
 U 1 1 5AC4C37A
 P 1200 7500
 F 0 "#PWR023" H 1200 7250 50  0001 C CNN
@@ -1192,7 +1218,7 @@ Wire Wire Line
 Wire Wire Line
 	1200 7250 1200 7500
 $Comp
-L VFD_Clock_LD8035-rescue:+5V #PWR024
+L +5V #PWR024
 U 1 1 5AC4C69E
 P 1200 6700
 F 0 "#PWR024" H 1200 6550 50  0001 C CNN
@@ -1211,7 +1237,7 @@ Wire Wire Line
 Wire Wire Line
 	1200 6950 1250 6950
 $Comp
-L VFD_Clock_LD8035-rescue:+12V #PWR025
+L +12V #PWR025
 U 1 1 5AC4CA95
 P 1900 6700
 F 0 "#PWR025" H 1900 6550 50  0001 C CNN
@@ -1224,7 +1250,7 @@ $EndComp
 Text Notes 950  6400 0    60   ~ 0
 MT3608 Up Converter 5V to 12V
 $Comp
-L VFD_Clock_LD8035-rescue:Conn_01x04 J1
+L Conn_01x04 J1
 U 1 1 5AC4E918
 P 1450 7050
 F 0 "J1" H 1450 7250 50  0000 C CNN
@@ -1235,7 +1261,7 @@ F 3 "" H 1450 7050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:Conn_01x04 J2
+L Conn_01x04 J2
 U 1 1 5AC4EA61
 P 2150 7050
 F 0 "J2" H 2150 7250 50  0000 C CNN
@@ -1250,7 +1276,7 @@ Wire Wire Line
 Wire Wire Line
 	4200 4200 4550 4200
 $Comp
-L VFD_Clock_LD8035-rescue:+5V #PWR026
+L +5V #PWR026
 U 1 1 5B0E28B7
 P 9300 650
 F 0 "#PWR026" H 9300 500 50  0001 C CNN
@@ -1261,7 +1287,7 @@ F 3 "" H 9300 650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:+5V #PWR027
+L +5V #PWR027
 U 1 1 5B0E2A72
 P 9300 1950
 F 0 "#PWR027" H 9300 1800 50  0001 C CNN
@@ -1272,7 +1298,7 @@ F 3 "" H 9300 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:+5V #PWR028
+L +5V #PWR028
 U 1 1 5B0E2E85
 P 9300 3150
 F 0 "#PWR028" H 9300 3000 50  0001 C CNN
@@ -1283,7 +1309,7 @@ F 3 "" H 9300 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:+5V #PWR029
+L +5V #PWR029
 U 1 1 5B0E2ED8
 P 9300 4400
 F 0 "#PWR029" H 9300 4250 50  0001 C CNN
@@ -1294,7 +1320,7 @@ F 3 "" H 9300 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:+5V #PWR030
+L +5V #PWR030
 U 1 1 5B0E2F2B
 P 11050 650
 F 0 "#PWR030" H 11050 500 50  0001 C CNN
@@ -1305,7 +1331,7 @@ F 3 "" H 11050 650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VFD_Clock_LD8035-rescue:+5V #PWR031
+L +5V #PWR031
 U 1 1 5B0E324E
 P 11100 1950
 F 0 "#PWR031" H 11100 1800 50  0001 C CNN
@@ -1350,22 +1376,4 @@ NoConn ~ 6400 3250
 NoConn ~ 5600 3250
 NoConn ~ 4200 3700
 NoConn ~ 4200 3800
-Wire Bus Line
-	9700 2000 9700 5750
-Wire Bus Line
-	7700 2000 7700 5750
-Wire Bus Line
-	6600 1950 6600 3350
-Wire Bus Line
-	7800 1900 8750 1900
-Wire Bus Line
-	7800 3100 8700 3100
-Wire Bus Line
-	7800 4300 8700 4300
-Wire Bus Line
-	7800 5550 8700 5550
-Wire Bus Line
-	9800 1900 10550 1900
-Wire Bus Line
-	9800 3100 10550 3100
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-update=2018/09/15 20:05:42
+update=2018/09/08 14:14:01
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,6 +25,18 @@ version=1
 NetIExt=net
 [general]
 version=1
+[eeschema]
+version=1
+LibDir=../Lib
+[eeschema/libraries]
+LibName1=power
+LibName2=device
+LibName3=transistors
+LibName4=conn
+LibName5=vfd-watch-cache
+LibName6=arduino
+LibName7=switches
+LibName8=MiscComponents
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
@@ -35,6 +47,3 @@ NetFmtName=
 SpiceForceRefPrefix=0
 SpiceUseNetNumbers=0
 LabSize=60
-[eeschema]
-version=1
-LibDir=

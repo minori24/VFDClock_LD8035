@@ -1,0 +1,9 @@
+(sym_lib_table
+  (lib (name VFD_Clock_LD8035-rescue)(type Legacy)(uri ${KIPRJMOD}/VFD_Clock_LD8035-rescue.lib)(options "")(descr ""))
+  (lib (name transistors)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/transistors.lib)(options "")(descr ""))
+  (lib (name conn)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/conn.lib)(options "")(descr ""))
+  (lib (name vfd-watch-cache)(type Legacy)(uri ${KIPRJMOD}/vfd-watch-cache.lib)(options "")(descr ""))
+  (lib (name arduino)(type Legacy)(uri "C:/Users/Minori Takao/Dropbox/Dev/KiCad/Lib/arduino.lib")(options "")(descr ""))
+  (lib (name switches)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/switches.lib)(options "")(descr ""))
+  (lib (name MiscComponents)(type Legacy)(uri "C:/Users/Minori Takao/Dropbox/Dev/KiCad/Lib/MiscComponents.lib")(options "")(descr ""))
+)
