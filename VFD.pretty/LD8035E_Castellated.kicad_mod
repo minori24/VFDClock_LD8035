@@ -1,0 +1,61 @@
+(module LD8035E_Castellated (layer F.Cu) (tedit 5C36C6BF)
+  (fp_text reference REF** (at 6.25 7.5) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value LD8035E_Castellated (at 0 -8) (layer F.Fab)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text user Filament (at -2.25 6.5) (layer F.CrtYd) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text user dp (at 2.25 6.25) (layer F.CrtYd) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text user Grid (at 6 4.5) (layer F.CrtYd) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text user Filament (at 9 1.5) (layer F.CrtYd) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text user - (at 6.75 -2.25) (layer F.CrtYd) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text user b (at 4.75 -5.25) (layer F.CrtYd) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text user g (at -2 -6.75) (layer F.CrtYd) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text user a (at 1.5 -6.75) (layer F.CrtYd) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text user f (at -5.5 -4.75) (layer F.CrtYd) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text user e (at -7 -1.75) (layer F.CrtYd) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text user d (at -6.75 1.75) (layer F.CrtYd) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text user c (at -5 4.5) (layer F.CrtYd) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_circle (center 0 0) (end 7.25 0) (layer F.SilkS) (width 0.15))
+  (fp_text user 1 (at -2.25 7.75) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (pad 7 thru_hole rect (at -1.25 -4.5 15.5) (size 1.524 2.5) (drill 0.762 (offset 0 -0.75)) (layers *.Cu *.Mask))
+  (pad 1 thru_hole rect (at 1.25 4.5 195.5) (size 1.524 2.5) (drill 0.8 (offset 0 -0.75)) (layers *.Cu *.Mask))
+  (pad 8 thru_hole rect (at -3.25 -3.25 45) (size 1.524 2.5) (drill 0.8 (offset 0 -0.75)) (layers *.Cu *.Mask))
+  (pad 9 thru_hole rect (at -4.5 -1.25 74.5) (size 1.524 2.5) (drill 0.8 (offset 0 -0.75)) (layers *.Cu *.Mask))
+  (pad 10 thru_hole rect (at -4.5 1.25 105.5) (size 1.524 2.5) (drill 0.8 (offset 0 -0.75)) (layers *.Cu *.Mask))
+  (pad 11 thru_hole rect (at -3.25 3.25 135) (size 1.524 2.5) (drill 0.8 (offset 0 -0.75)) (layers *.Cu *.Mask))
+  (pad 12 thru_hole rect (at -1.25 4.5 164.5) (size 1.524 2.5) (drill 0.8 (offset 0 -0.75)) (layers *.Cu *.Mask))
+  (pad 2 thru_hole rect (at 3.25 3.25 225) (size 1.524 2.5) (drill 0.8 (offset 0 -0.75)) (layers *.Cu *.Mask))
+  (pad 3 thru_hole rect (at 4.5 1.25 254.5) (size 1.524 2.5) (drill 0.8 (offset 0 -0.75)) (layers *.Cu *.Mask))
+  (pad 4 thru_hole rect (at 4.5 -1.25 285.5) (size 1.524 2.5) (drill 0.8 (offset 0 -0.75)) (layers *.Cu *.Mask))
+  (pad 5 thru_hole rect (at 3.25 -3.25 315) (size 1.524 2.5) (drill 0.8 (offset 0 -0.75)) (layers *.Cu *.Mask))
+  (pad 6 thru_hole rect (at 1.25 -4.5 344.5) (size 1.524 2.5) (drill 0.8 (offset 0 -0.75)) (layers *.Cu *.Mask))
+  (pad "" np_thru_hole circle (at 0 0) (size 9.2 9.2) (drill 9.2) (layers *.Cu *.Mask))
+)
