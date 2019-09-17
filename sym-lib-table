@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name VFD_Clock_LD8035-rescue)(type Legacy)(uri ${KIPRJMOD}/VFD_Clock_LD8035-rescue.lib)(options "")(descr ""))
+  (lib (name VFDClock_LD8035)(type Legacy)(uri ${KIPRJMOD}/lib/symbols/VFDClock_LD8035.lib)(options "")(descr ""))
 )
