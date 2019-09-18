@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name VFD)(type KiCad)(uri ${KIPRJMOD}/VFD.pretty)(options "")(descr ""))
+  (lib (name Logo)(type KiCad)(uri ${KIPRJMOD}/lib/modules/logo.pretty)(options "")(descr ""))
 )
