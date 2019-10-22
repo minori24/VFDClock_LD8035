@@ -1,7 +1,7 @@
 // VfdClock.ino
 // (c) 2018 FaLab Kannai
 //
-static String	VersionStr	= "06.01.02";
+static String	VersionStr	= "06.02.00";
 
 #include <Wire.h>
 #include "RTClib.h"
@@ -162,6 +162,17 @@ void clockBtn1_LoopHandler()
   switch ( Cl1.mode() ) {
   case Clock::MODE_DISP_DATE:
   case Clock::MODE_DISP_TIME:
+    if ( Btn[1].click_count() >= 1 ) {      
+      if ( BlinkEnable ) {
+	BlinkEnable = false;
+      } else {
+	BlinkEnable = true;
+      }
+      Serial.print("BlinkEnable: ");
+      Serial.println(BlinkEnable);
+    }
+    
+    /*
     if ( Btn[1].click_count() == 2 ) {
       startStopWatch();
       return;
@@ -170,6 +181,7 @@ void clockBtn1_LoopHandler()
       startGame1();
       return;
     }
+    */
     break;
   default:
     if ( Btn[1].long_pressed() || Btn[1].repeat() ) {
@@ -415,6 +427,7 @@ void setup()
   Btn[0].init(PIN_BUTTON_MODE, "[MODE]");
   Btn[1].init(PIN_BUTTON_SET,  "[SET] ");
 
+  Serial.print("Button::Num: ");
   Serial.println(Button::Num);
   for (int i=0; i < Button::Num; i++) {
     Button::Obj[i]->print();

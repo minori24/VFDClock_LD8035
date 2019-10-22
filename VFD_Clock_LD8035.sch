@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:VFD_Clock_LD8035-cache
-EELAYER 30 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -956,17 +956,11 @@ F 3 "" H 3250 7500 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	3100 7050 3500 7050
-Wire Wire Line
-	3100 7150 3500 7150
-Wire Wire Line
 	3100 7250 3250 7250
 Wire Wire Line
 	3250 7250 3250 7500
 Text Label 3500 7050 2    60   ~ 0
 SCL
-Text Label 3500 7150 2    60   ~ 0
-SDA
 Wire Wire Line
 	7800 1400 8150 1400
 Text Label 7800 1400 0    60   ~ 0
@@ -1346,10 +1340,18 @@ F 3 "" H 2900 7050 50  0001 C CNN
 	1    2900 7050
 	-1   0    0    1   
 $EndComp
+Wire Wire Line
+	3100 7050 3500 7050
+Text Label 3500 6950 2    60   ~ 0
+SDA
+Wire Wire Line
+	3100 6950 3500 6950
 Wire Bus Line
 	9700 2000 9700 5750
 Wire Bus Line
 	7700 2000 7700 5750
+Wire Bus Line
+	6600 1950 6600 3350
 Wire Bus Line
 	9800 3100 10550 3100
 Wire Bus Line
@@ -1362,6 +1364,4 @@ Wire Bus Line
 	7800 3100 8700 3100
 Wire Bus Line
 	7800 1900 8750 1900
-Wire Bus Line
-	6600 1950 6600 3350
 $EndSCHEMATC

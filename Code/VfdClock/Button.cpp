@@ -155,7 +155,8 @@ void Button::print(boolean interrupt)
 {
   String str = interrupt ? "!" : " ";
   
-  str += _name + " ";
+  str += " Btn[" + String(_id) + "]";
+  str += "(" + _name + ") ";
   str += _value        ? "H "  : "L ";
   str += String(_count) + " ";
   str += String(_click_count) + " ";
