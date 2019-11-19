@@ -14,27 +14,32 @@
 - USB Cable x 1
 
 ## 2. Tools Required
-Soldering iron and Solder (lead / tin solder is recommended)
-Wire Cutters
-Tweezers
-Screwdriver
-Multimeter
-Desoldering Wick
+- Soldering iron and Solder (lead / tin solder is recommended)
+- Wire Cutters
+- Tweezers
+- Screwdriver
+- Multimeter
+- Desoldering Wick
 
 The clock kit does not include power adapter. USB Smartphone Charger should be used with the kit.
 
 ## 3. Assembly of the PCB
 ### Transistor Array and Switches
-Solder TBD62783APG to U2 and U3. Align nothes on the component to the mark on the PCB.
+Solder TBD62783APG to U2 and U3. Align notches on the component to the mark on the PCB.
 
 ![IC/SW](images/tr_array.png)
 
 ### Pin Headers and Pin Sockets
 Snap off pin headers and pin sockets required numbers and mount on the following places.
+
 **Pin Headers**
- - Arduino Nano
+ - Arduino Nano (Solder Pin headers on  Nano, and Pin Sockets on the PCB)
  - J3 (5 pins x1)
  - Power Supply Module (4pins x 2)
+
+**Pin Sockets**
+
+- Arduino Nano (PCB Side)
 
 ![arduino](images/arduino.jpg)
 
@@ -70,8 +75,11 @@ Connect USB Cable to Arduino, you will see the VFD counting time.
 ![RTC](images/rtc.png)
 
 ## User Guide
-![guide](images/Guide1.png)
+Refer [User Guide](docs/Guide.pdf) for how to adjust time, change mode, and to play a retro minigame.
 
 ## 6. Case Assembly
 Refer pictures below
+ - Install Flat Head Screw on the rooftop
+ - Use round head screw to fix rubber foot
+
 ![voltage](images/vfd.jpg)
